@@ -1,0 +1,104 @@
+object Form1: TForm1
+  Left = 293
+  Height = 986
+  Top = 15
+  Width = 1639
+  Caption = '3D Geometry Run'
+  ClientHeight = 986
+  ClientWidth = 1639
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.1'
+  object Image2: TImage
+    Left = 20
+    Height = 900
+    Top = 70
+    Width = 1600
+  end
+  object Image1: TImage
+    Left = 20
+    Height = 281
+    Top = 350
+    Width = 1600
+  end
+  object ButtonPause: TButton
+    Left = 120
+    Height = 31
+    Top = 20
+    Width = 94
+    Caption = 'Pause'
+    Enabled = False
+    OnClick = ButtonPauseClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ButtonStart: TButton
+    Left = 20
+    Height = 31
+    Top = 20
+    Width = 90
+    Caption = 'Start'
+    OnClick = ButtonStartClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ButtonMove: TButton
+    Left = 1480
+    Height = 31
+    Top = 20
+    Width = 94
+    Caption = 'Move'
+    OnKeyPress = ButtonMoveKeyPress
+    ParentFont = False
+    TabOrder = 2
+  end
+  object LabelScore: TLabel
+    Left = 500
+    Height = 28
+    Top = 20
+    Width = 81
+    Caption = 'Score : 0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = LabelScoreClick
+  end
+  object LabelLastScore: TLabel
+    Left = 960
+    Height = 28
+    Top = 20
+    Width = 121
+    Caption = 'Last Score : -'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = LabelScoreClick
+  end
+  object TimerRender: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerRenderTimer
+    Left = 300
+    Top = 290
+  end
+  object TimerCreate: TTimer
+    Enabled = False
+    Interval = 2500
+    OnTimer = TimerCreateTimer
+    Left = 90
+    Top = 290
+  end
+  object TimerUpdate: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerUpdateTimer
+    Left = 200
+    Top = 290
+  end
+end

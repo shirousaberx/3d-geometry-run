@@ -1,0 +1,101 @@
+object Form1: TForm1
+  Left = 293
+  Height = 789
+  Top = 15
+  Width = 1311
+  BorderStyle = bsSingle
+  Caption = '3D Geometry Run'
+  ClientHeight = 789
+  ClientWidth = 1311
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.1'
+  object Image2: TImage
+    Left = 16
+    Height = 720
+    Top = 56
+    Width = 1280
+  end
+  object Image1: TImage
+    Left = 16
+    Height = 225
+    Top = 280
+    Width = 1280
+  end
+  object ButtonPause: TButton
+    Left = 96
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Pause'
+    Enabled = False
+    OnClick = ButtonPauseClick
+    TabOrder = 0
+  end
+  object ButtonStart: TButton
+    Left = 16
+    Height = 25
+    Top = 16
+    Width = 72
+    Caption = 'Start'
+    OnClick = ButtonStartClick
+    TabOrder = 1
+  end
+  object ButtonMove: TButton
+    Left = 1184
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Move'
+    OnKeyPress = ButtonMoveKeyPress
+    TabOrder = 2
+  end
+  object LabelScore: TLabel
+    Left = 400
+    Height = 21
+    Top = 16
+    Width = 63
+    Caption = 'Score : 0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = LabelScoreClick
+  end
+  object LabelLastScore: TLabel
+    Left = 768
+    Height = 21
+    Top = 16
+    Width = 94
+    Caption = 'Last Score : -'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = LabelScoreClick
+  end
+  object TimerRender: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerRenderTimer
+    Left = 240
+    Top = 232
+  end
+  object TimerCreate: TTimer
+    Enabled = False
+    Interval = 2500
+    OnTimer = TimerCreateTimer
+    Left = 72
+    Top = 232
+  end
+  object TimerUpdate: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerUpdateTimer
+    Left = 160
+    Top = 232
+  end
+end
