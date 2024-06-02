@@ -1,5 +1,5 @@
 ## 3D Geometry Run
-3D game build from scratch using Pascal language without using any graphics library.
+3D game build from scratch using Pascal language only using rudimentary graphics library.
 
 To play, press 'play' button and move up and down using 'w' or 's'
 
